@@ -79,4 +79,18 @@ export default {};
   header.active a.button {
     color: white;
   }
+  @media screen and (max-width: 700px) {
+    header .nav {
+      display: none;
+    }
+    header.active {
+      background: transparent;
+    }
+    header a {
+      background: #1E2330;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 1px rgb(44, 44, 44, 0.5);
+    }
+  }
 </style>

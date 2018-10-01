@@ -214,4 +214,12 @@ export default {
   color: #1E2330;
   text-decoration: underline;
 }
+@media screen and (max-width: 700px) {
+  .main .container {
+    max-width: 100%;
+  }
+  .device-container {
+    flex: 0;
+  }
+}
 </style>
