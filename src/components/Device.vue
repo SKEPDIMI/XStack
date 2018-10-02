@@ -39,16 +39,16 @@ export default {
   align-items: flex-end;
 }
 img {
-  height: 18rem;
+  height: 60vh;
 }
 
 @media screen and (max-width: 1000px) {
   img {
-    height: 90vh;
+    height: 80vh;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   img {
     display: none;
   }

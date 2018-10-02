@@ -5,13 +5,14 @@
     </a>
 
     <div class="nav">
-      <a href="/" v-bind:class="{ active: true }">HOME</a>
-      <a href="/services">SERVICES</a>
-      <a href="/about">ABOUT</a>
-      <a href="/team">TEAM</a>
-      <a href="/blog">BLOG</a>
-      <a href="/login">LOGIN</a>
-      <a href="/signup" class="button active">SIGN UP</a>
+      <router-link :to="'/'" exact-active-class="active">HOME</router-link>
+      <router-link :to="'/services'" active-class="active">SERVICES</router-link>
+      <router-link :to="'/about'" active-class="active">ABOUT</router-link>
+      <router-link :to="'/team'" active-class="active">TEAM</router-link>
+      <router-link :to="'/blog'" active-class="active">BLOG</router-link>
+
+      <router-link :to="'/login'" active-class="active">LOGIN</router-link>
+      <router-link :to="'/signup'" active-class="active" class="button">SIGN UP</router-link>
     </div>
   </header>
 </template>
@@ -58,9 +59,9 @@ export default {};
     background: whitesmoke;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: .25em;
+    color: white;
   }
   header a.button:hover {
-    color: white;
     background-color: rgba(255, 255, 255, 0.4);
   }
   header.active {
