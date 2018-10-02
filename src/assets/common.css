@@ -57,8 +57,10 @@
   background-color: white;
   padding:10em 0;
 }
-.body {
+.skew > div {
   transform:skew(0deg,10deg);
+}
+.body {
   background-color: white;
   width: 100%;
   color: #616e82;

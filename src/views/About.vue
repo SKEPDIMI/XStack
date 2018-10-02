@@ -12,8 +12,10 @@
           </button>
         </div>
       </div>
-      <div class="device-container" ref="device">
-        <Device/>
+      <div class="chat-container">
+        <div class="chat-bubble">
+
+        </div>
       </div>
     </div>
     <div class="body" ref="body">
@@ -68,9 +70,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .body {
-  transform: skew(0deg, 0deg);
   background-color: transparent;
   text-align: center;
 }
@@ -84,5 +85,10 @@ export default {
   padding: 1rem 2rem 1rem 1rem;
   position: relative;
 }
-
+.chat-container {
+  display: flex;
+}
+.chat-bubble {
+  background-color: white;
+}
 </style>
