@@ -14,7 +14,22 @@
       </div>
       <div class="chat-container">
         <div class="chat-bubble">
-
+          <div class="thumbnail">
+          </div>
+          <div class="content">
+            <div class="header">Hello world</div>
+            <div class="text">this is a test on stylings for the message bubbles!</div>
+          </div>
+          <button></button>
+        </div>
+        <div class="chat-bubble">
+          <div class="thumbnail">
+          </div>
+          <div class="content">
+            <div class="header">Hello world</div>
+            <div class="text">this is a test on stylings for the message bubbles!</div>
+          </div>
+          <button></button>
         </div>
       </div>
     </div>
@@ -71,6 +86,9 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  background: linear-gradient(to bottom right #1e2330 0%, #141928 100%);
+}
 .body {
   background-color: transparent;
   text-align: center;
@@ -87,8 +105,52 @@ export default {
 }
 .chat-container {
   display: flex;
+  flex-direction: column;
+  
+  /* To make it the same height as the parent*/
+  align-self: stretch;
+  flex: 1;
+  padding-left: 2em;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .chat-bubble {
+  width: 100%;
+  border-radius: 10px;
   background-color: white;
+  padding: 1.5em;
+  color: #949a9f;
+  margin-bottom: 3em;
+
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: x-small;
+}
+.chat-bubble .thumbnail {
+  border-radius: 2px;
+  height: 25px;
+  width: 25px;
+  background: #141928;
+}
+.chat-bubble .content {
+  flex: 1;
+  text-align: left;
+  margin: 0 10px;
+  font-size: small;
+}
+
+.chat-bubble .content .header {
+  font-weight: 600;
+}
+.chat-bubble .content .text {
+  min-height: 40px;
+  max-width: 50%;
+}
+.chat-bubble button {
+  width: 45px;
+  height: 20px;
+  background-color: #949a9f;
+  align-self: center;
 }
 </style>

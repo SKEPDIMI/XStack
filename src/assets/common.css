@@ -4,7 +4,7 @@
   background: linear-gradient(to right, #101525 0%,#1e2638 50%,#101525 100%);
 }
 .main {
-  margin-top: 5em;
+  margin-top: 8em;
   min-height: 75vh;
   display: flex;
   flex-direction: row;
