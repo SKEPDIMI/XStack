@@ -1,5 +1,5 @@
 <template>
-  <div class="landing">
+  <div class="wrapper">
     <div class="main">
       <div class="container" ref="mainContainer">
         <h1>Freedom is the Opportunity to Succeed or Fail</h1>
@@ -80,6 +80,7 @@
 </template>
 
 <script>
+import '../assets/common.css';
 import Device from '../components/Device';
 
 export default {
@@ -115,111 +116,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.landing {
-  overflow: hidden;
-  color: white;
-  background: linear-gradient(to right, #101525 0%,#1e2638 50%,#101525 100%);
-}
-.main {
-  margin-top: 5em;
-  min-height: 75vh;
-  display: flex;
-  align-items: center;
-  padding: 0 2em;
-}
-.container {
-  text-align: left;
-  max-width: 45%;
-}
-.container p {
-  color: #656975;
-  font-size: 1.6em;
-}
-.container h1 {
-  letter-spacing: 1px;
-  font-weight: normal;
-  margin: 4px 0;
-  font-size: 2em;
-}
-.container button {
-  padding: 1.3em 1.75em;
-  border-radius: .5em;
-  font-weight: 600;
-  background: white;
-}
-.container button.secondary {
-  background-color: transparent;
-  border: 0 solid transparent;
-}
-.container button a {
-  color: #1E2330;
-  text-decoration: none;
-  transition: .2s all ease-in-out;
-}
-.container button.secondary a {
-  color: white;
-}
-.container button a:hover {
-  color: #656975;
-}
-.device-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: -30vh;
-  z-index: 10;
-}
-.skew {
-  transform:skew(0deg,-5deg);
-  background-color: white;
-  padding:5em 0;
-}
-.body {
-  transform:skew(0deg,5deg);
-  background-color: white;
-  width: 100%;
-  color: #616e82;
-  z-index: 10;
-  min-height: 100vh;
-  padding: 20vh 2em;
-  text-align: left;
-}
+<style>
 
-.body h1 {
-  color: #1E2330;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-bottom: 1rem;
-}
-.row > div {
-  flex: 1;
-}
-.row > div:nth-child(1) {
-  margin-right: 1rem;
-}
-.row > div:nth-child(2) {
-  margin-left: 1rem;
-}
-.row a {
-  margin-top: 1em;
-  text-decoration: none;
-  color:rgb(25, 73, 194);
-  transition: .2s all ease-in-out;
-}
-.row a:hover {
-  color: #1E2330;
-  text-decoration: underline;
-}
-@media screen and (max-width: 700px) {
-  .main .container {
-    max-width: 100%;
-  }
-  .device-container {
-    flex: 0;
-  }
-}
 </style>
