@@ -12,22 +12,13 @@
           </button>
         </div>
       </div>
-      <div class="chat-container">
-        <div class="chat-bubble">
+      <div class="chat-container" ref="chat">
+        <div class="chat-bubble" v-for="m in messages" :key="m.header">
           <div class="thumbnail">
           </div>
           <div class="content">
-            <div class="header">Hello world</div>
-            <div class="text">this is a test on stylings for the message bubbles!</div>
-          </div>
-          <button></button>
-        </div>
-        <div class="chat-bubble">
-          <div class="thumbnail">
-          </div>
-          <div class="content">
-            <div class="header">Hello world</div>
-            <div class="text">this is a test on stylings for the message bubbles!</div>
+            <div class="header">{{m.header}}</div>
+            <div class="text">{{m.text}}</div>
           </div>
           <button></button>
         </div>
@@ -81,7 +72,30 @@
 import '../assets/common.css';
 
 export default {
-  name: 'About'
+  name: 'About',
+  data() {
+    return {
+      messages: [
+        { header: 'Hello world!', text: 'This is a test for chat bubbles animations' },
+        { header: 'Hey!', text: 'This is another test for chat bubbles animations' },
+        { header: 'Woohoo!', text: 'Another test for chat bubbles animations' }
+      ]
+    }
+  },
+  mounted() {
+    let {
+      chat
+    } = this.$refs
+
+    let messages = Object.values(chat.children);
+    let tl = new this.$gsap.TimelineMax({ delay: 0.5, repeat: -1 });
+
+    messages.forEach(message => {
+      tl
+      .add(this.$gsap.TweenLite.fromTo(message, 5, { y: 200, opacity: 0 }, { y: 40, opacity: 1 }))
+      .add(this.$gsap.TweenLite.to(message, 1, { y: 0, opacity: 0 }));
+    });
+  },
 }
 </script>
 
@@ -111,11 +125,10 @@ export default {
   align-self: stretch;
   flex: 1;
   padding-left: 2em;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: flex-end;
 }
 .chat-bubble {
-  width: 100%;
+  position: absolute;
   border-radius: 10px;
   background-color: white;
   padding: 1.5em;
@@ -152,5 +165,11 @@ export default {
   height: 20px;
   background-color: #949a9f;
   align-self: center;
+}
+
+@media screen and (max-width: 800px) {
+  .chat-container {
+    display: none;
+  }
 }
 </style>
