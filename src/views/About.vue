@@ -107,16 +107,6 @@ export default {
   background-color: transparent;
   text-align: center;
 }
-.card {
-  text-align: left;
-  background: #fff;
-  border-radius: 2px;
-  display: inline-block;
-  min-height: 300px;
-  margin: 1rem;
-  padding: 1rem 2rem 1rem 1rem;
-  position: relative;
-}
 .chat-container {
   display: flex;
   flex-direction: column;
