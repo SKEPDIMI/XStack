@@ -76,10 +76,10 @@ export default {
   data() {
     return {
       messages: [
-        { header: '1!', text: 'This is a test for chat bubbles animations' },
-        { header: '2!', text: 'This is another test for chat bubbles animations' },
-        { header: '3!', text: 'Another test for chat bubbles animations' },
-        { header: '4!', text: 'This is a test for chat bubbles animations' },
+        { header: 'Ray Newberry', text: 'Helped reduce the amount of time we spent administrating by automating the process for us. Great design and workflow' },
+        { header: 'Bharti B.', text: 'Very versatile and speedy development. Would work with them again' },
+        { header: 'Tyler Díaz', text: 'XStack is willing to take on a challenge and produce some advantage out of the scope of work no matter the situation' },
+        { header: 'Mac Wilkinson', text: 'Very friendly company, very knowledgable even outside their specialization field' },
         { header: '5!', text: 'This is another test for chat bubbles animations' },
         { header: '6!', text: 'Another test for chat bubbles animations' },
         { header: '7!', text: 'This is another test for chat bubbles animations' },
@@ -105,8 +105,8 @@ export default {
 
     messageGroups.forEach(messages => {
       tl
-        .staggerFromTo(messages, 3, { y: 400, opacity: 0, display: 'none' }, { y: 40, opacity: 1, display: 'flex' }, 2)
-        .staggerTo(messages, 1, { y: 0, opacity: 0 }, 0.5)
+        .staggerFromTo(messages, 2, { y: 400, opacity: 0, display: 'none' }, { y: 40, opacity: 1, display: 'flex' }, 2)
+        .staggerTo(messages, 1, { delay: 5, y: 0, opacity: 0 }, 0.5)
         .to(messages, 0, { display: 'none' })
     })
   },
@@ -161,11 +161,11 @@ export default {
 }
 .chat-bubble .content .text {
   min-height: 40px;
-  max-width: 50%;
+  max-width: 80%;
 }
 .chat-bubble button {
-  width: 45px;
-  height: 20px;
+  width: 50px;
+  height: 25px;
   background-color: #949a9f;
   align-self: center;
 }
