@@ -76,25 +76,39 @@ export default {
   data() {
     return {
       messages: [
-        { header: 'Hello world!', text: 'This is a test for chat bubbles animations' },
-        { header: 'Hey!', text: 'This is another test for chat bubbles animations' },
-        { header: 'Woohoo!', text: 'Another test for chat bubbles animations' }
+        { header: '1!', text: 'This is a test for chat bubbles animations' },
+        { header: '2!', text: 'This is another test for chat bubbles animations' },
+        { header: '3!', text: 'Another test for chat bubbles animations' },
+        { header: '4!', text: 'This is a test for chat bubbles animations' },
+        { header: '5!', text: 'This is another test for chat bubbles animations' },
+        { header: '6!', text: 'Another test for chat bubbles animations' },
+        { header: '7!', text: 'This is another test for chat bubbles animations' },
+        { header: '8!', text: 'Another test for chat bubbles animations' }
       ]
     }
   },
   mounted() {
-    let {
+    const {
       chat
     } = this.$refs
 
-    let messages = Object.values(chat.children);
-    let tl = new this.$gsap.TimelineMax({ delay: 0.5, repeat: -1 });
+    const allMessages = Object.values(chat.children);
 
-    messages.forEach(message => {
+    let messageGroups = [];
+    const chunkSize = 3;
+
+    for (let i = 0; i < allMessages.length; i += chunkSize) {
+      messageGroups.push(allMessages.slice(i, i + chunkSize));
+    }
+
+    let tl = new this.$gsap.TimelineMax({ delay: 0.5, repeat: -1 })
+
+    messageGroups.forEach(messages => {
       tl
-      .add(this.$gsap.TweenLite.fromTo(message, 5, { y: 200, opacity: 0 }, { y: 40, opacity: 1 }))
-      .add(this.$gsap.TweenLite.to(message, 1, { y: 0, opacity: 0 }));
-    });
+        .staggerFromTo(messages, 3, { y: 400, opacity: 0, display: 'none' }, { y: 40, opacity: 1, display: 'flex' }, 2)
+        .staggerTo(messages, 1, { y: 0, opacity: 0 }, 0.5)
+        .to(messages, 0, { display: 'none' })
+    })
   },
 }
 </script>
@@ -118,7 +132,6 @@ export default {
   align-items: flex-end;
 }
 .chat-bubble {
-  position: absolute;
   border-radius: 10px;
   background-color: white;
   padding: 1.5em;
