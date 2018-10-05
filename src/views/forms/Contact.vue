@@ -16,28 +16,28 @@
         <div class="header">
           <h1>Contact us</h1>
         </div>
-          <form>
+          <form @submit.prevent="handleSubmit">
             <label>FULL NAME</label>
-            <input placeholder="Enter your name">
+            <input v-model="formData.name" placeholder="Enter your name" required>
             <div class="side-by-side">
               <div>
                 <label>EMAIL</label>
-                <input type="email" placeholder="Enter your email">
+                <input v-model="formData.email" type="email" placeholder="Enter your email" required>
               </div>
               <div>
                 <label>PHONE</label>
-                <input placeholder="Enter your phone">
+                <input v-model="formData.phone" placeholder="Enter your phone">
               </div>
             </div>
             <label>NEEDED SERVICES*</label>
-            <select type="select">
+            <select v-model="formData.services" type="select" required>
               <option value="web development">Web development</option>
               <option value="mobile development">Mobile development</option>
               <option value="software consulting">Software consulting</option>
               <option value="business automation">Business automation</option>
             </select>
             <label>MESSAGE</label>
-            <textarea cols="30" rows="10" placeholder="Your message here...">
+            <textarea v-model="formData.message" cols="30" rows="10" placeholder="Your message here..." required>
 
             </textarea>
             <button type="submit">
@@ -51,7 +51,34 @@
 
 <script>
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  data() {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        phone: '',
+        services: '',
+        message: '',
+      }
+    }
+  },
+  methods: {
+    handleSubmit() {
+    const {
+      name,
+      email,
+      phone,
+      services,
+      message
+    } = this.formData
+
+    let data = {name, email, phone, services, message};
+
+    // send email here
+    
+    },
+  },
 }
 </script>
 
