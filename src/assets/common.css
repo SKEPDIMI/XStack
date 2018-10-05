@@ -8,6 +8,7 @@ html {box-sizing: border-box;}
   overflow-x: hidden;
 	position: relative;
 	right: 0;
+  background: linear-gradient(to right, #101525 0%,#1e2638 50%,#101525 100%);
 }
 
 .app.active-drawer {
@@ -22,13 +23,7 @@ html {box-sizing: border-box;}
   right: 0;
 }
 
-.wrapper {
-  overflow: hidden;
-  color: white;
-  background: linear-gradient(to right, #101525 0%,#1e2638 50%,#101525 100%);
-}
 .main {
-  margin-top: 8em;
   min-height: 75vh;
   display: flex;
   flex-direction: row;
@@ -78,12 +73,15 @@ html {box-sizing: border-box;}
   margin-left: auto;
 }
 .skew {
-  transform:skew(0deg,-10deg);
+  transform:skew(0deg,-5deg);
   background-color: white;
   padding:10em 0;
+  overflow-x: hidden;
+  margin-bottom: -10em;
 }
 .skew > div {
-  transform:skew(0deg,10deg);
+  transform:skew(0deg, 5deg);
+  padding-bottom: 10em;
 }
 .body {
   background-color: white;
