@@ -9,12 +9,12 @@
 
         <div>
           <button>
-            <a href="/contact">CONTACT US</a>
+            <router-link to="contact">CONTACT US</router-link>
           </button>
           <button class="secondary">
-            <a href="/signup">
+            <router-link to="signup">
               <i class="fas fa-chevron-right"></i> CREATE AN ACCOUNT
-            </a>
+            </router-link>
           </button>
         </div>
       </div>
@@ -46,7 +46,7 @@
               Commune qualisque mel ei, eos dico dicam repudiare id. Nihil
               deserunt his ea duo an agam legendos salutatus, sea corpora pertinax
               imperdiet id.</p>
-            <a href="/about">learn more</a>
+            <router-link to="about">learn more</router-link>
           </div>
         </div>
         <div class="row">
@@ -71,7 +71,7 @@
               oportere tractatos has eu, id eum vidit percipit.
               Commune qualisque mel ei, eos dico dicam repudiare id. Nihil
               deserunt his ea.</p>
-            <a href="/about">learn more</a>
+            <router-link to="about">learn more</router-link>
           </div>
         </div>
       </div>
