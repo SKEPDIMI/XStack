@@ -61,6 +61,10 @@ export default {
   padding: 10px;
   font-size: large;
 }
+
+.side-menu a:last-child {
+  border-bottom: none;
+}
 /* We need to make changes to the width of the sidemenu on devices smaller or equal than 400px */
 @media screen and (max-width: 410px) {
   
