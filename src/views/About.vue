@@ -27,42 +27,65 @@
     <div class="body" ref="body">
       <div class="card">
         <h1>Our Philosophy</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Nam laoreet purus pretium mauris finibus feugiat. Mauris a 
-          arcu porta ante tristique efficitur non non sapien. Nulla 
-          quis ipsum quis diam congue egestas. Etiam sed sodales ipsum, 
-          finibus faucibus enim. Donec finibus mauris ac nunc porta mattis. 
-          Pellentesque habitant morbi tristique senectus et netus et malesuada 
-          fames ac turpis egestas. Donec accumsan ultricies erat nec faucibus. 
-          Pellentesque habitant morbi tristique senectus et netus et malesuada 
-          fames ac turpis egestas. Etiam vitae sodales sem. Sed dapibus eros 
-          non erat auctor, sit amet mollis lacus elementum. Sed lobortis lacus 
-          in placerat aliquam.</p>
+        <p>XStack aims to provide growing businesses <router-link to="services">solutions</router-link> 
+          using the latest technologies. We are a hard-working team of developers 
+          and designers looking to make a positive change in a competitive industry by 
+          helping ideas come to completion, and guiding businesses to achieve more in a 
+          constantly changing marketplace.</p>
         <div class="blockquote">
           <blockquote>
-            <p>Etiam vitae sodales sem. Sed dapibus eros 
-            non erat auctor, sit amet mollis lacus elementum. Sed lobortis lacus 
-            in placerat aliquam. Pellentesque habitant morbi tristique senectus et 
-            netus et malesuada fames ac turpis egestas.</p>
+            <p>
+              XStack's goal is the client's success and growth, even if it takes  extra time and resources from our part. Our client's
+              success is our success, and until this is not achieved, we are not satisfied.
+            </p>
           </blockquote>
           - XStack
         </div>
       </div>
       <div class="card">
-        <h1>How we Function</h1>
-        <p>lacinia lectus imperdiet vitae. Interdum et malesuada fames ac 
-          ante ipsum primis in faucibus. Integer porta, est vitae venenatis 
-          tempor, purus erat porta lectus, quis mattis metus arcu eget lorem. 
-          In nulla dolor, volutpat vitae ligula vitae, vestibulum pretium 
-          lectus. Fusce et felis dolor. Duis sed fermentum sem, finibus suscipit 
-          odio. In lacinia turpis ut felis scelerisque venenatis. Cras vel libero 
-          ac mi blandit ornare.</p>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ul>
-        <router-link to="/services">learn more</router-link>
+        <h1>XStack Core Values</h1>
+        <div class="row">
+          <div>
+            <h2>Personal and Professional Growth</h2>
+            <p>We are determined to constantly challenge and stretch ourselves, both personally 
+              and professionally. Our team is always encouraged to tap into their potential and,
+              through learning and bravery, reach new heights while helping our clients do the same.
+            </p>
+            <i>Our business is built on growth.</i>
+          </div>
+          <div class="img-frame">
+            <img src="@/assets/growth.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <h2>When you succeed, we succeed</h2>
+            <p>In a rapidly changing marketplace, XStack aims to assist our clients in their growth. 
+              This means going the extra mile for the businesses we aim to help. XStack's goal is the client's
+              success and growth, even if it takes  extra time and resources from our part. Our client's
+              success is our success, and until this is not achieved, we are not satisfied.
+            </p>
+            <i>Client satisfaction is in the name of the game</i>
+          </div>
+          <div class="img-frame">
+            <img src="@/assets/mutual.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <h2>Best practices and standards</h2>
+            <p>XStack aims to maintain reliability during the development process. 
+              This means following through with the best practices, in order to help
+              our clients focus less on the software and more on their business.
+            </p>
+            <i>Help our clients achieve the best possible results by following best practices</i>
+          </div>
+          <div class="img-frame">
+            <img src="@/assets/results.jpg" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
