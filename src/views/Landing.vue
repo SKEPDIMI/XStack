@@ -101,16 +101,6 @@ export default {
     timeline
       .fromTo(mainContainer, 1.75, { x: -200, opacity: 1 }, { x: 0, opacity: 1 })
       .fromTo(device, 0.8, { x: 200, opacity: 0 }, { x: 0, opacity: 1 });
-
-    // create a scene
-    new this.$scrollmagic.Scene({
-      reverse: true,
-      triggerElement: body,
-      triggerHook: 'onCenter',
-    })
-      .setTween(this.$gsap.TweenMax.fromTo(body, 1, { x: 200, opacity: 0 }, { x: 0, opacity: 1 }))
-      .setClassToggle('#main-header', 'active')
-      .addTo(controller); // assign the scene to the controller
   },
 };
 </script>
