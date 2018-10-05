@@ -76,7 +76,7 @@ export default {
     let data = {name, email, phone, services, message};
 
     // send email here
-    
+
     },
   },
 }
@@ -87,12 +87,12 @@ export default {
   background: white;
   padding: 0;
   align-items: stretch;
+  min-height: 90vh;
 }
 .contact .img {
   flex: 2;
   background-position: center;
   background-size: cover;
-  min-height: 90vh;
 
   display: flex;
   justify-content: center;
