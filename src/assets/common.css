@@ -10,8 +10,13 @@ html {box-sizing: border-box;}
 	right: 0;
 }
 
+.app.active-drawer {
+  overflow: hidden;
+  max-height: 100vh;
+}
 .app.active-drawer .view {
   right: 300px;
+  overflow-y: hidden;
 }
 .app.active-drawer #drawer {
   right: 0;
