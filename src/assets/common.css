@@ -1,3 +1,22 @@
+html {box-sizing: border-box;}
+
+.view, #drawer {
+  transition: all 0.5s ease;
+}
+
+.view {
+  overflow-x: hidden;
+	position: relative;
+	right: 0;
+}
+
+.app.active-drawer .view {
+  right: 300px;
+}
+.app.active-drawer #drawer {
+  right: 0;
+}
+
 .wrapper {
   overflow: hidden;
   color: white;
@@ -123,8 +142,11 @@ h1, h2 {
   position: relative;
 }
 @media screen and (max-width: 800px) {
-  .main .container {
-    max-width: 100%;
+  .row {
+    flex-wrap: wrap;
+  }
+  .row > div {
+    min-width: 100%;
   }
   .device-container {
     flex: 0;

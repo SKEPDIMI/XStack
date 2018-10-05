@@ -13,15 +13,28 @@
 
       <router-link :to="'/login'" active-class="active">LOGIN</router-link>
       <router-link :to="'/signup'" active-class="active" class="button">SIGN UP</router-link>
+      <div v-on:click="toggleSidemenu" class="toggle" ref="toggleButton">
+        <span class="bar one" ref="burgerTop"></span>
+        <span class="bar two" ref="burgerMid"></span>
+        <span class="bar three" ref="burgerBot"></span>
+      </div>
     </div>
   </header>
 </template>
 <script>
-export default {};
+export default {
+  name: 'Header',
+  methods: {
+    toggleSidemenu(event) {
+      const app = document.querySelector('.app');
+      app.classList.toggle('active-drawer');
+    }
+  }
+};
 </script>
 <style scoped>
   header {
-    position: fixed;
+    position: absolute;
     z-index: 100;
     background-color: transparent;
     top: 0;
@@ -41,6 +54,8 @@ export default {};
   header .nav {
     float: right;
     margin: 1em 0;
+    display: inline-flex;
+    align-items: center;
   }
   header a {
     text-decoration: none;
@@ -64,6 +79,7 @@ export default {};
   header a.button:hover {
     background-color: rgba(255, 255, 255, 0.4);
   }
+  /*
   header.active {
     background-color: #1E2330;
   }
@@ -80,14 +96,37 @@ export default {};
   header.active a.button {
     color: white;
   }
+  */
+
+  header .toggle {
+    width: 10vh;
+    height: 10vh;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-left: 1em;
+    padding: 10px;
+  }
+  header .toggle .bar {
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    background: white;
+
+    transition: .2s all ease-in-out;
+  }
   @media screen and (max-width: 700px) {
-    header .nav {
+    header .nav a {
       display: none;
     }
     header.active {
       background: transparent;
     }
-    header a {
+    header a > img {
       background: #1E2330;
       padding: 10px;
       border-radius: 50%;
