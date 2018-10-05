@@ -4,6 +4,7 @@
     <div class="view">
       <Header/>
       <router-view/>
+      <Footer />
     </div>
   </div>
 </template>
@@ -11,12 +12,14 @@
 <script>
 import Header from '@/components/Header';
 import Sidemenu from '@/components/Sidemenu';
+import Footer from '@/components/Footer';
 
 export default {
   name: 'App',
   components: {
     Header,
     Sidemenu,
+    Footer,
   },
 };
 </script>
