@@ -146,6 +146,15 @@ h1, h2 {
   padding: 1rem 2rem 1rem 1rem;
   position: relative;
 }
+.img-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row .img-frame img {
+  max-width: 30vw;
+  border-radius: 5px;
+}
 @media screen and (max-width: 800px) {
   .row {
     flex-wrap: wrap;
