@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="services">
     <div class="main">
       <div class="container">
         <h2>Best Quality and Quick</h2>

@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="landing">
     <div class="main">
       <div class="container" ref="mainContainer">
         <h1>Freedom is the Opportunity to Succeed or Fail</h1>
@@ -107,5 +107,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
+.main {
+  color: white;
+}
 </style>

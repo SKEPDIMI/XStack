@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="about">
     <div class="main">
       <div class="container" ref="mainContainer">
         <h2>About XStack</h2>
