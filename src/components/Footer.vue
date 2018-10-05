@@ -78,6 +78,7 @@ footer h1 {
   padding: 0;
 }
 footer .content {
+  z-index: 100;
   background-color: rgb(24, 24, 24);
   height: 90vh;
   flex: 1;
