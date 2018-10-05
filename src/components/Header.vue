@@ -34,12 +34,9 @@ export default {
 </script>
 <style scoped>
   header {
-    position: absolute;
-    z-index: 100;
     background-color: transparent;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    width: 100%;
     color: #666c78;
     padding: 1em 2em;
     display: inline-flex;
