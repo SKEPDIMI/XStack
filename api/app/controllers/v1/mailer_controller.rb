@@ -1,4 +1,4 @@
-class MailerController < ApplicationController
+class V1::MailerController < ApplicationController
   def contact
     ContactMailer.contact_email(email_params).deliver_now
 
