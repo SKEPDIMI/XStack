@@ -1,6 +1,6 @@
 class ContactMailer < ApplicationMailer
   default from: ENV['GMAIL_USERNAME']
-
+  
   def contact_email(data)
     @name = data['name']
     @email = data['email']
@@ -8,6 +8,6 @@ class ContactMailer < ApplicationMailer
     @message = data['message']
     @services = data['services']
 
-    mail(to: @email, subject: "Contact email from #{@name}")
+    mail(to: 'xstack.co@gmail.com', from: @email, subject: "Contact email from #{@name} through XSTACK")
   end
 end
