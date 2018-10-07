@@ -3,10 +3,7 @@ class V1::SessionsController < ApplicationController
     @user = User.where(email: params[:email]).first
 
     if @user&.valid_password? params[:password]
-
-      # create token for the user
-
-      render json: { message: 'Authenticated user', user: @user.as_json(only: [:email]) }, status: :created
+      render json: { message: 'Authenticated user', user: @user.as_json(only: [:email, :authentication_token]) }, status: :created
     else
       render json: { message: 'Invalid password' }, status: :unauthorized
     end
