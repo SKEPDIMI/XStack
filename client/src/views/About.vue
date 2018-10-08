@@ -8,7 +8,7 @@
 
         <div>
           <button>
-            <a href="/contribute">CONTRIBUTE</a>
+            <router-link :to="'/team/join'">CONTRIBUTE</router-link>
           </button>
         </div>
       </div>
@@ -92,8 +92,6 @@
 </template>
 
 <script>
-import '../assets/common.css';
-
 export default {
   name: 'About',
   data() {
