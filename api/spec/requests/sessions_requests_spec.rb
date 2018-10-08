@@ -1,32 +1,50 @@
 require 'rails_helper'
 
-RSpec.describe V1::SessionsController, type: :request do
-  let!(:user) { create(:user) }
-  let(:valid_credentials) do
+RSpec.describe SessionsController, type: :request do
+  let(:user) { create(:user) }
+  let(:url) { '/login' }
+  let(:params) do
     {
-      email: user.email,
-      password: user.password
-    }.to_json
+      user: {
+        email: user.email,
+        password: user.password
+      }
+    }
   end
-  let(:invalid_credentials) do
-    {
-      email: Faker::Internet.email,
-      password: Faker::Internet.password
-    }.to_json
-  end
-  
-  describe 'POST /v1/sessions' do
-    context 'when valid credentials' do
-      before { post '/v1/sessions', params: valid_credentials }
-      it 'should have :created status code' do
-        puts "VALID_CREDENTIALS: #{valid_credentials}"
-        puts "OUR_USER: #{user.id}"
 
-        expect(response).to have_http_status 201
-      end
-      it 'should return auth token' do
-        expect(json['authentication_token']).not_to be_nil
-      end
+  context 'when params are correct' do
+    before do
+      post url, params: params
     end
+
+    it 'returns 200' do
+      expect(response).to have_http_status(200)
+    end
+
+    it 'returns JTW token in authorization header' do
+      expect(response.headers['Authorization']).to be_present
+    end
+
+    it 'returns valid JWT token' do
+      decoded_token = decoded_jwt_token_from_response(response)
+      expect(decoded_token.first['sub']).to be_present
+    end
+  end
+
+  context 'when login params are incorrect' do
+    before { post url }
+    
+    it 'returns unathorized status' do
+      expect(response.status).to eq 401
+    end
+  end
+end
+
+RSpec.describe 'DELETE /logout', type: :request do
+  let(:url) { '/logout' }
+
+  it 'returns 204, no content' do
+    delete url
+    expect(response).to have_http_status(204)
   end
 end
