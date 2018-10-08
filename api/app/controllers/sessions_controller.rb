@@ -1,4 +1,4 @@
-class V1::SessionsController < ApplicationController
+class SessionsController < Devise::SessionsController
 
   private
 
