@@ -1,5 +1,5 @@
 <template>
-  <header id='main-header'>
+  <header id='main-header' :class="[altBackground ? 'alt' : '']">
     <div class="left">
       <router-link to='/'>
         <img src="@/assets/logo/1.png" alt="icon">
@@ -11,7 +11,10 @@
       <router-link :to="'/services'" active-class="active">SERVICES</router-link>
       <router-link :to="'/about'" active-class="active">ABOUT</router-link>
       <router-link :to="'/team'" active-class="active">TEAM</router-link>
+      <router-link :to="'/contact'">CONTACT</router-link>
+      <!--
       <router-link :to="'/blog'" active-class="active">BLOG</router-link>
+      -->
 
       <router-link :to="'/login'" active-class="active">LOGIN</router-link>
       <router-link :to="'/signup'" active-class="active" class="button">SIGN UP</router-link>
@@ -31,7 +34,13 @@ export default {
       const app = document.querySelector('.app');
       app.classList.toggle('active-drawer');
     }
-  }
+  },
+  computed: {
+      altBackground() {
+          const path = this.$route.path.split('/')
+          return path.join('/').toLowerCase() === '/team/join'
+      }
+  },
 };
 </script>
 <style scoped>
