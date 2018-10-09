@@ -6,6 +6,7 @@ import Services from '@/views/Services';
 import Team from '@/views/Team';
 import Blog from '@/views/Blog';
 import Contact from '@/views/forms/Contact';
+import Join from '@/views/Join';
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/team',
       name: 'Team',
       component: Team
+    },
+    {
+      path: '/team/join',
+      name: 'Join',
+      component: Join
     },
     {
       path: '/blog',

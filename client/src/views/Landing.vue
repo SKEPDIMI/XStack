@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import '../assets/common.css';
+import '@/assets/stylesheets/common.css';
 import Device from '../components/Device';
 
 export default {

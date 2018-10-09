@@ -3,7 +3,7 @@
     <div class="main">
       <div>
         <h1>We are still gathering our team.</h1>
-        <p>Please come back later or shoot us a message!</p>
+        <p>Please come back later or shoot us a message! <router-link :to="'/team/join'">Interested in joining?</router-link></p>
       </div>
     </div>
   </div>

@@ -8,7 +8,7 @@
 
         <div>
           <button>
-            <a href="/contact">CONTACT US</a>
+            <router-link to="contact">CONTACT US</router-link>
           </button>
         </div>
       </div>
@@ -113,8 +113,6 @@
 </template>
 
 <script>
-import '../assets/common.css';
-
 export default {
 
 }

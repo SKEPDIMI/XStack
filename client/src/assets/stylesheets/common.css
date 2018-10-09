@@ -4,6 +4,16 @@ html {box-sizing: border-box;}
   transition: all 0.5s ease;
 }
 
+a {
+  color: lightgray;
+  transition: .2s all ease-in-out;
+}
+a:hover {
+  color: lightslategrey;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
 .view {
   overflow-x: hidden;
 	position: relative;
@@ -30,6 +40,7 @@ html {box-sizing: border-box;}
   align-items: center;
   justify-content: space-between;
   padding: 0 2em;
+  color: white;
 }
 .container {
   text-align: left;

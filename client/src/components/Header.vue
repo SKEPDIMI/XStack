@@ -1,15 +1,20 @@
 <template>
-  <header id='main-header'>
-    <a href='/'>
-      <img src="https://www.rays.com/wp-content/uploads/2018/06/x-close-icon-white.png" alt="icon">
-    </a>
+  <header id='main-header' :class="[altBackground ? 'alt' : '']">
+    <div class="left">
+      <router-link to='/'>
+        <img src="@/assets/logo/1.png" alt="icon">
+      </router-link>
+    </div>
 
     <div class="nav">
       <router-link :to="'/'" exact-active-class="active">HOME</router-link>
       <router-link :to="'/services'" active-class="active">SERVICES</router-link>
       <router-link :to="'/about'" active-class="active">ABOUT</router-link>
       <router-link :to="'/team'" active-class="active">TEAM</router-link>
+      <router-link :to="'/contact'">CONTACT</router-link>
+      <!--
       <router-link :to="'/blog'" active-class="active">BLOG</router-link>
+      -->
 
       <router-link :to="'/login'" active-class="active">LOGIN</router-link>
       <router-link :to="'/signup'" active-class="active" class="button">SIGN UP</router-link>
@@ -29,7 +34,13 @@ export default {
       const app = document.querySelector('.app');
       app.classList.toggle('active-drawer');
     }
-  }
+  },
+  computed: {
+      altBackground() {
+          const path = this.$route.path.split('/')
+          return path.join('/').toLowerCase() === '/team/join'
+      }
+  },
 };
 </script>
 <style scoped>
@@ -38,7 +49,6 @@ export default {
     position: relative;
     width: 100%;
     color: #666c78;
-    padding: 1em 2em;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -75,6 +85,17 @@ export default {
   }
   header a.button:hover {
     background-color: rgba(255, 255, 255, 0.4);
+  }
+  header .left {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    padding: 0 20% 0 0;
+    background: white;
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+  }
+  header img {
+    height: 2.5em;
   }
   /*
   header.active {
@@ -123,11 +144,17 @@ export default {
     header.active {
       background: transparent;
     }
-    header a > img {
-      background: #1E2330;
-      padding: 10px;
-      border-radius: 50%;
-      box-shadow: 2px 2px 1px rgb(44, 44, 44, 0.5);
+    header img {
+      height: 1.5em;
+    }
+    header .toggle {
+      margin-left: 0;
+      padding: 10%;
+    }
+    header .left {
+      padding: 0 0;
+      min-width: 50%;
+      clip-path: none;
     }
   }
 </style>
