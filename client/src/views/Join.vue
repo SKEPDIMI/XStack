@@ -38,6 +38,12 @@
           or ideas we value, we constantly look for ways to change how the world sees us.
         </p>
         <router-link :to="'/about'">Learn about our values and vision</router-link>
+
+        <h2>What are the Benefits?</h2>
+        <h1>Benefits XStack provides</h1>
+        <h3>- Location independence</h3>
+        <h3>- Flexible hours</h3>
+        <h3>- Learning and growth</h3>
       </div>
       <div class="side">
         <button class="join-button" ref="joinButton">JOIN THE TEAM</button>
