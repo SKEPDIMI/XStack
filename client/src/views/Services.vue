@@ -161,9 +161,27 @@ textarea {
   flex: 1;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 550px) {
+  .services .img-frame img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px){
   .form-container {
     display: none;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .services .row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(173, 173, 173);
+  }
+  .services .img-frame {
+    justify-content: flex-start;
   }
 }
 </style>

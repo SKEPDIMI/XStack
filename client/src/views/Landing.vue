@@ -7,7 +7,7 @@
         <p>Find out how we can help you grow your
           business and find solutions using the latest technologies</p>
 
-        <div>
+        <div id="buttons">
           <button>
             <router-link to="contact">CONTACT US</router-link>
           </button>
@@ -107,7 +107,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.main {
-  color: white;
+.landing #buttons {
+  width: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .landing #buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .landing #buttons button.secondary {
+    padding: 15px 0 0 0;
+  }
 }
 </style>

@@ -50,7 +50,7 @@
     </div>
     <div class="bottom">
       <p>
-        © XStack. All Rights Reserved.
+        © XStack 2018. All Rights Reserved.
       </p>
     </div>
   </footer>
@@ -80,7 +80,7 @@ footer h1 {
 footer .content {
   z-index: 100;
   background-color: rgb(24, 24, 24);
-  height: 90vh;
+  min-height: 90vh;
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -115,5 +115,16 @@ footer .bottom {
   background: rgb(24, 24, 24);
   color: #B4BBC3;
   height: 10vh;
+}
+
+@media screen and (max-width: 740px) {
+  .right {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer .content {
+    flex-direction: column;
+  }
 }
 </style>

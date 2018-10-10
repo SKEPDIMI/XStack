@@ -191,9 +191,30 @@ export default {
   align-self: center;
 }
 
+@media screen and (max-width: 550px) {
+  .body {
+    background: white;
+    padding: 20px;
+  }
+  .card {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .about .img-frame img {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .chat-container {
     display: none;
+  }
+  .about .row {
+    flex-direction: column-reverse;
+  }
+  .about .img-frame {
+    justify-content: flex-start;
   }
 }
 </style>
