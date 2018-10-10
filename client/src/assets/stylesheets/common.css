@@ -34,12 +34,11 @@ a:hover {
 }
 
 .main {
-  min-height: 75vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2em;
+  padding: 1em 20px;
   color: white;
 }
 .container {
@@ -164,6 +163,12 @@ h1, h2 {
   max-width: 30vw;
   border-radius: 5px;
 }
+
+@media screen and (min-width: 2500px) {
+  body {
+    font-size: larger;
+  }
+}
 @media screen and (max-width: 800px) {
   .row {
     flex-wrap: wrap;
@@ -173,5 +178,11 @@ h1, h2 {
   }
   .device-container {
     flex: 0;
+  }
+  .main {
+    min-height: 60vh;
+  }
+  .main .container {
+    min-width: 90%;
   }
 }

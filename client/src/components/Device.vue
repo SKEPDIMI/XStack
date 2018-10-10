@@ -8,7 +8,7 @@
 const pathToImg = (n) => {
   return './static/images/' + n + ".png"
 };
-const getImgUrl = () => window.innerWidth > 1000 ? pathToImg('ipad') : pathToImg('phone');
+const getImgUrl = () => window.innerWidth > 1200 ? pathToImg('ipad') : pathToImg('phone');
 
 export default {
   name: 'Device',
@@ -39,16 +39,17 @@ export default {
   align-items: flex-end;
 }
 img {
-  height: 60vh;
+  margin: 10vh 0 0 10vh;
+  max-height: 500px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   img {
     height: 80vh;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   img {
     display: none;
   }
