@@ -137,5 +137,12 @@ header.alt .button:hover {
   border-radius: 5px;
   font-size: large;
   border: none;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  margin: auto;
 }
 </style>
