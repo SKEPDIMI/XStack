@@ -1,13 +1,12 @@
 <template>
   <div class="side-menu" id="drawer">
-    <header>
-      <h1>X-STACK</h1>
-    </header>
     <ul>
       <router-link :to="'/'" exact-active-class="active">HOME</router-link>
       <router-link :to="'/services'" active-class="active">SERVICES</router-link>
       <router-link :to="'/about'" active-class="active">ABOUT</router-link>
+      <router-link :to="'/contact'" active-class="active">CONTACT</router-link>
       <router-link :to="'/team'" active-class="active">TEAM</router-link>
+      <router-link :to="'/team/join'" active-class="active">JOIN TEAM</router-link>
       <router-link :to="'/blog'" active-class="active">BLOG</router-link>
     </ul>
   </div>
@@ -36,18 +35,11 @@ export default {
   right: -300px;
   transition: all 0.5s ease;
 }
-.side-menu header {
-  background: #878d9c;
-  min-height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .side-menu h1 {
   font-weight: lighter;
 }
 .side-menu ul {
-  padding: 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

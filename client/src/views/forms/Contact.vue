@@ -14,7 +14,7 @@
       </div>
       <div class="form-container">
         <div class="header">
-          <h1>Contact us</h1>
+          <h1>CONTACT US</h1>
         </div>
           <form @submit.prevent="handleSubmit">
             <label>FULL NAME</label>
@@ -149,5 +149,24 @@ export default {
   padding: 4px 0;
   margin: 5px 0;
   font-size: medium;
+}
+
+@media screen and (max-width: 620px) {
+  .contact .main {
+    flex-direction: column;
+  }
+  .contact .img {
+    align-items: flex-start;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    background-attachment: fixed;
+  }
+  .contact .img > div {
+    min-width: 0;
+  }
+  
 }
 </style>

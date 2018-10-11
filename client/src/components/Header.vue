@@ -137,24 +137,16 @@ export default {
 
     transition: .2s all ease-in-out;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1000px) {
+    header {
+      background: white;
+    }
+    header .toggle .bar {
+      background: black;
+      height: 5px;
+    }
     header .nav a {
       display: none;
-    }
-    header.active {
-      background: transparent;
-    }
-    header img {
-      height: 1.5em;
-    }
-    header .toggle {
-      margin-left: 0;
-      padding: 10%;
-    }
-    header .left {
-      padding: 0 0;
-      min-width: 50%;
-      clip-path: none;
     }
   }
 </style>
