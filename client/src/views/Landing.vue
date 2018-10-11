@@ -31,46 +31,46 @@
             <h1>We Are a Full-Service Software Development and Solutions Agency</h1>
           </div>
           <div>
-            <h2>Tractatos ius</h2>
-            <p>Lorem ipsum dolor sit amet, nonumy partiendo reprehendunt nec ad,
-              duo an agam legendos salutatus, sea corpora pertinax imperdiet id.
-              In malis veritus cum. In diam quaeque efficiantur ius. Erant
-              oportere tractatos has eu, id eum vidit percipit.
-              Commune qualisque mel ei, eos dico dicam repudiare id. Nihil
-              deserunt his ea.</p>
-            <h2>Salutatus</h2>
-            <p>Lorem ipsum dolor sit amet, nonumy partiendo reprehendunt nec ad,
-              duo an agam legendos salutatus, sea corpora pertinax imperdiet id.
-              In malis veritus cum. In diam quaeque efficiantur ius. Erant
-              oportere tractatos has eu, id eum vidit percipit.
-              Commune qualisque mel ei, eos dico dicam repudiare id. Nihil
-              deserunt his ea duo an agam legendos salutatus, sea corpora pertinax
-              imperdiet id.</p>
-            <router-link to="about">learn more</router-link>
+            <h2>Software development</h2>
+            <p>
+              XStack is a team of developers and designers providing solutions using the 
+              latest technologies and best practices. We are highly flexible, focused on 
+              the success of the company, and willing to go the extra mile to achieve this.
+            </p>
+            <h2>Our Skills</h2>
+            <p>
+              We work on the latest tools and technologies used to build modern applications, and 
+              don't limit ourselves to a single stack or framework. Our favorite tools include
+              technologies like HTML/CSS, ES6, React/Redux/Native, Vue.js, Node.js, socket.io, MongoDB, Ruby on Rails, 
+              AWS, Git and Heroku. Here at XStack we are constantly challenging ourselves and finding new ways 
+              to improve our skills, which is why we aim to expand these skills and continue 
+              to provide clients with the results they need.
+            </p>
+            <router-link to="/services">learn more</router-link>
           </div>
         </div>
         <div class="row">
           <div>
             <h2>Why XStack?</h2>
-            <h1>We Aim to Provide Solutions Using Our Wide Skillset</h1>
+            <h1>Your Success is Our Success, and We Are Not Satisfied Until You Are</h1>
           </div>
           <div>
-            <h2>Focused on results</h2>
-            <p>Lorem ipsum dolor sit amet, nonumy partiendo reprehendunt nec ad,
-              duo an agam legendos salutatus, sea corpora pertinax imperdiet id.
-              In malis veritus cum. In diam quaeque efficiantur ius. Erant
-              oportere tractatos has eu, id eum vidit percipit.
-              Commune qualisque mel ei, eos dico dicam repudiare id. Nihil
-              deserunt his ea duo an agam legendos salutatus, sea corpora pertinax
-              imperdiet id.</p>
+            <h2>Personal Service is the Name of the Game</h2>
+            <p>
+              Here at XStack, we are not satisfied until our client's success is 
+              met. We like to differentiate ourselves by making the your company's 
+              success our own success. We provide you with a team to help you solve 
+              problems which they are eager to learn from, and we are not satisfied
+              until you are.
+            </p>
 
-            <h2>Tractatos ius</h2>
-            <p>Lorem ipsum dolor sit amet, nonumy partiendo reprehendunt nec ad,
-              duo an agam legendos salutatus, sea corpora pertinax imperdiet id.
-              In malis veritus cum. In diam quaeque efficiantur ius. Erant
-              oportere tractatos has eu, id eum vidit percipit.
-              Commune qualisque mel ei, eos dico dicam repudiare id. Nihil
-              deserunt his ea.</p>
+            <h2>XStack is Built on Growth</h2>
+            <p>
+              XStack was created in order to help its members grow their professional 
+              experience and skills while helping companies solve real problems. Therefore 
+              we aim for personal, financial and professional growth by tapping into our 
+              potential.
+            </p>
             <router-link to="about">learn more</router-link>
           </div>
         </div>

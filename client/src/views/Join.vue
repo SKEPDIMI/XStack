@@ -19,22 +19,25 @@
         <p>
           Something we want all to have very clear right now is that <strong>at XStack, you are not a developer, designer, consultant, etc.
           You are an integral part of the team, having the ability to make major contributions from the start</strong>. At XStack, we  
-          believe that anyone willing to take action on their purpose or desire is completely capable of doing so. This is why we want 
-          to provide people with potential to shape the face of the company and even run it as their own. How exactly do we accomplish this?
+          believe that everyone has great amounts of untapped potential they are yet to fully discover. This is why we want 
+          to provide our team with potential to shape XStack in order to accomplish more. How exactly do we achieve this?
         </p>
         <h3>How You Will Make Major Contributions to the Company:</h3>
         <strong>- Out-of-the-box thinking</strong>
-        <p>We encourage you to think outside of the box always. Every idea is integral to achieve success, and is important 
+        <p>
+          We encourage you to think outside of the box always. Every idea is integral to achieve success, and is important 
           for our collective growth
         </p>
         <strong>- We let you make desicions</strong>
         <p>We want you to make desicions about the company could push it forward, and advance our abilities collectively</p>
         <strong>- Public blog </strong>
-        <p>We provide a way for you to share your ideas with the rest of the web, so we can find new ways of fixing problems, 
+        <p>
+          We provide a way for you to share your ideas with the rest of the web, so we can find new ways of fixing problems, 
           and you gain exposure from other clients.
         </p>
         <strong>- Change the way we look</strong>
-        <p>We are constantly looking for ways to change the way we project ourselves to the world, be it from design, presentation 
+        <p>
+          We are constantly looking for ways to change the way we project ourselves to the world, be it from design, presentation 
           or ideas we value, we constantly look for ways to change how the world sees us.
         </p>
         <router-link :to="'/about'">Learn about our values and vision</router-link>
