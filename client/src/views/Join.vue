@@ -140,7 +140,6 @@ header.alt .button:hover {
   border-radius: 5px;
   font-size: large;
   border: none;
-
   position: relative;
   top: 0;
   left: 0;

@@ -166,7 +166,6 @@ h1, h2 {
   max-width: 30vw;
   border-radius: 5px;
 }
-
 @media screen and (min-width: 2500px) {
   body {
     font-size: larger;
