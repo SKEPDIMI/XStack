@@ -39,7 +39,7 @@ export default {
   font-weight: lighter;
 }
 .side-menu ul {
-  padding: 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
