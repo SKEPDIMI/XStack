@@ -33,6 +33,7 @@ gem 'figaro'
 # Use devise for authentication
 gem 'devise'
 gem 'devise_token_auth'
+gem 'omniauth'
 gem 'jwt'
 
 group :development, :test do
