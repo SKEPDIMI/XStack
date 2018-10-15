@@ -4,10 +4,13 @@ import Vue from 'vue';
 import KsVueScrollmagic from 'ks-vue-scrollmagic';
 import App from './App';
 import router from './router';
+import Vuex from 'vuex';
+import store from './store';
 
 Vue.config.productionTip = false;
 
 Vue.use(KsVueScrollmagic);
+Vue.use(Vuex);
 
 /* eslint-disable no-new */
 new Vue({

@@ -16,6 +16,10 @@ import Footer from '@/components/Footer';
 
 export default {
   name: 'App',
+  mounted() {
+    console.log('hello, world! app has started!')
+    console.log(this.$store)
+  },
   components: {
     Header,
     Sidemenu,
